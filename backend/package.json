@@ -2,7 +2,7 @@
   "name": "support-desk",
   "version": "1.0.0",
   "description": "support desk",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
