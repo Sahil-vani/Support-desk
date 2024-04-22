@@ -2,12 +2,21 @@ const express = require("express");
 const connectDB = require("./config/db_config");
 const { errorHandler } = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
-
+const cors = require("cors");
 const PORT = process.env.PORT || 8000;
 const app = express();
 
 // DB Connection
 connectDB();
+
+// cors
+app.use(
+  cors({
+    origin: `${process.env.FRONTEND_URL}`,
+    methods: "GET,PUT,POST,DELETE",
+    credentials: true,
+  })
+);
 
 // body parser
 app.use(express.json());
