@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../features/auth/authSlice";
 import { toast } from "react-toastify";
+import { get } from "../features/auth/authService";
 
 function Login() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function Login() {
     if (isError || message) {
       toast.error(message);
     }
-
+    get();
     if (user) {
       navigate("/");
     }
