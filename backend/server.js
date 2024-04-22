@@ -9,6 +9,7 @@ const app = express();
 // DB Connection
 connectDB();
 
+console.log(`${process.env.FRONTEND_URL}`);
 // cors
 app.use(
   cors({
