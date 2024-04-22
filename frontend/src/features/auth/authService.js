@@ -16,7 +16,6 @@ const signup = async (formData) => {
 };
 
 const authService = {
-  get,
   login,
   signup,
 };
