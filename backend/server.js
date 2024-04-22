@@ -9,7 +9,6 @@ const app = express();
 // DB Connection
 connectDB();
 
-console.log(`${process.env.FRONTEND_URL}`);
 // cors
 app.use(
   cors({
@@ -20,7 +19,7 @@ app.use(
 );
 
 // Handle preflight requests
-app.options("*", cors());
+app.options(`${process.env.FRONTEND_URL}`, cors());
 
 // body parser
 app.use(express.json());
