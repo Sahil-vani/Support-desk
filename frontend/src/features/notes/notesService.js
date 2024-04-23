@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const NOTES_URL = "/api/notes";
+const NOTES_URL = "https://support-desk-7hlh.onrender.com/api/notes";
 
 const addNotes = async (formData, token) => {
   const option = {
