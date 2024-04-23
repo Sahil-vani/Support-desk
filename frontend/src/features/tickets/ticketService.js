@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const TICKET_URL = "/api/ticket";
+const TICKET_URL = "https://support-desk-7hlh.onrender.com/api/ticket";
 
 // create ticket
 const raiseTicket = async (formData, token) => {
