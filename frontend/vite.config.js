@@ -10,6 +10,7 @@ export default defineConfig({
         target: "https://support-desk-7hlh.onrender.com",
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
