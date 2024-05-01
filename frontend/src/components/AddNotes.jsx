@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createNote } from "../features/notes/notesSlice";
 
@@ -10,7 +10,7 @@ function AddNotes({ handleNewNotes, newNotes, user }) {
   const handleSubmit = () => {
     const data = {
       ticketId: ticket._id,
-      userID: ticket.user,
+      userID: user?.id,
       isStaff: user?.admin ? true : false,
       text: formData,
     };
